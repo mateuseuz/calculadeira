@@ -1,0 +1,106 @@
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <div id="visor">
+      <h3>{{historico}}</h3>
+      <h1>{{calculo}}</h1>
+    </div>
+    <div id="botaos">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-button class="preto" (click)="inserir_operador('!')">!</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button class="preto" (click)="inserir_operador('^')">^</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button class="preto" (click)="inserir_operador('√')">√</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button class="preto" (click)="inserir_elemento('3.14')">π</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-button class="azul" (click)="resetar()">AC</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button class="op_simples" (click)="trocar_sinal()">+/-</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button class="op_simples" (click)="inserir_operador('%')">%</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button class="op_simples" (click)="inserir_operador('÷')">÷</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-button class="numero" (click)="inserir_elemento('7')">7</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button class="numero" (click)="inserir_elemento('8')">8</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button class="numero" (click)="inserir_elemento('9')">9</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button class="op_simples" (click)="inserir_operador('×')">×</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-button class="numero" (click)="inserir_elemento('4')">4</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button class="numero" (click)="inserir_elemento('5')">5</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button class="numero" (click)="inserir_elemento('6')">6</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button class="op_simples" (click)="inserir_operador('-')">-</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-button class="numero" (click)="inserir_elemento('1')">1</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button class="numero" (click)="inserir_elemento('2')">2</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button class="numero" (click)="inserir_elemento('3')">3</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button class="op_simples" (click)="inserir_operador('+')">+</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-button class="numero" (click)="inserir_elemento('0')">0</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button class="numero" (click)="inserir_elemento('.')">.</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button class="numero" (click)="deletar()">⌫</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button class="azul" (click)="calcular()">=</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+</ion-content>
